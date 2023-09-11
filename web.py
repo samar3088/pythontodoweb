@@ -3,6 +3,7 @@ import functions
 
 todos = functions.get_todos()
 
+st.set_page_config(layout="wide")
 
 def add_todo():
     todo = st.session_state["new_todo"] + "\n"
@@ -25,3 +26,7 @@ for index, todo in enumerate(todos):
 
 st.text_input(label="Enter a todo", placeholder="Add new todo...",
               on_change=add_todo, key='new_todo')
+
+print("Hello")
+
+st.session_state
